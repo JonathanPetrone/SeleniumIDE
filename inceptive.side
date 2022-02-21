@@ -1,0 +1,327 @@
+{
+  "id": "fc6eb3b1-ac53-41e2-b17f-69d070a96be4",
+  "version": "2.0",
+  "name": "inceptive",
+  "url": "https://www.inceptive.se",
+  "tests": [{
+    "id": "08096345-acea-4f60-ab42-51cb9355f89f",
+    "name": "CheckDreamTeam",
+    "commands": [{
+      "id": "fbbc7233-6b98-4f54-9b75-eea9917a1d44",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "74de3561-a186-4b54-8239-20816718b156",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1920x1080",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5e1786e9-6d87-4faf-935b-5b3768b3a604",
+      "comment": "Checkar om företagsloggan för Inceptive visas",
+      "command": "assertElementPresent",
+      "target": "xpath=//img[@alt='INCEPTIVE - WE EMPOWER TEAMS WITH HIGHLY SKILLED QA PROFESSIONALS']",
+      "targets": [
+        ["css=.gif-div:nth-child(1) img", "css:finder"],
+        ["xpath=//img[@alt='INCEPTIVE - WE EMPOWER TEAMS WITH HIGHLY SKILLED QA PROFESSIONALS']", "xpath:img"],
+        ["xpath=//a/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6805aa08-54aa-4dff-990f-4ba558264c06",
+      "comment": "Klickar på knappen med Dream Team på första sidan",
+      "command": "click",
+      "target": "linkText=MEET THE DREAM TEAM",
+      "targets": [
+        ["linkText=MEET THE DREAM TEAM", "linkText"],
+        ["css=.div-block-145 > .btn---secondarydark", "css:finder"],
+        ["xpath=//a[contains(text(),'MEET THE DREAM TEAM')]", "xpath:link"],
+        ["xpath=(//a[contains(@href, '/dream-team')])[2]", "xpath:href"],
+        ["xpath=//div[4]/div[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'MEET THE DREAM TEAM')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "44b37238-c15b-4c36-b162-d1048a07a20e",
+      "comment": "Checkar att Martin är en del av Inceptive Dream Team",
+      "command": "assertText",
+      "target": "xpath=//section[@id='dev-section']/div[5]/div[2]/div/span",
+      "targets": [
+        ["xpath=//section[@id='dev-section']/div[5]/div[2]/div/span", "xpath:idRelative"],
+        ["xpath=//div[5]/div[2]/div/span", "xpath:position"]
+      ],
+      "value": "MARTIN Jansson"
+    }, {
+      "id": "c8be9d8d-a7c9-4b96-8a4a-a3809d2eb4eb",
+      "comment": "Checkar att Jonathan är en del av Inceptive Dream Team",
+      "command": "assertText",
+      "target": "css=.person-div:nth-child(15) strong",
+      "targets": [
+        ["css=.person-div:nth-child(15) strong", "css:finder"],
+        ["xpath=//section[@id='dev-section']/div[15]/div[2]/div/span/strong", "xpath:idRelative"],
+        ["xpath=//div[15]/div[2]/div/span/strong", "xpath:position"],
+        ["xpath=//strong[contains(.,'JONATHAN Petrone')]", "xpath:innerText"]
+      ],
+      "value": "JONATHAN Petrone"
+    }, {
+      "id": "00d274f7-2377-4e31-be93-8e93514684e9",
+      "comment": "Undersöker om det finns en bild på Martin",
+      "command": "verifyElementPresent",
+      "target": "xpath=//img[contains(@src,'https://uploads-ssl.webflow.com/608fa9bc5a9b7b5a40b07c92/61b886b8ec1cf1623463a015_Jonathan%20Petrone.png')]",
+      "targets": [
+        ["css=.image-63", "css:finder"],
+        ["xpath=//img[contains(@src,'https://uploads-ssl.webflow.com/608fa9bc5a9b7b5a40b07c92/61b886b8ec1cf1623463a015_Jonathan%20Petrone.png')]", "xpath:img"],
+        ["xpath=//section[@id='dev-section']/div[15]/div/img", "xpath:idRelative"],
+        ["xpath=//div[15]/div/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2cea3633-30b3-451c-a33a-6e5a37cd2c0e",
+      "comment": "Undersöker om det finns en bild på Jonathan",
+      "command": "verifyElementPresent",
+      "target": "xpath=//img[contains(@src,'https://uploads-ssl.webflow.com/608fa9bc5a9b7b5a40b07c92/611f8dd02d36effd872c8357_Martin%20Jansson_l.png')]",
+      "targets": [
+        ["css=.image-72", "css:finder"],
+        ["xpath=//img[contains(@src,'https://uploads-ssl.webflow.com/608fa9bc5a9b7b5a40b07c92/611f8dd02d36effd872c8357_Martin%20Jansson_l.png')]", "xpath:img"],
+        ["xpath=//section[@id='dev-section']/div[5]/div/img", "xpath:idRelative"],
+        ["xpath=//section/div[5]/div/img", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "dbe58272-2084-4287-9ed5-08032d2f7b40",
+    "name": "CheckSkills",
+    "commands": [{
+      "id": "f7fa5956-1f57-46ec-93b9-1a5074d7c9cc",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "83d01734-2f86-4396-b623-efb5235256dc",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1920x1080",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "acbac4c0-7633-4afd-813c-018fe63d12a4",
+      "comment": "Ser så att länken SKILLS har texten SKILLS",
+      "command": "assertText",
+      "target": "css=.menu-link:nth-child(2) > .menu-txt",
+      "targets": [
+        ["css=.menu-link:nth-child(2) > .menu-txt", "css:finder"],
+        ["xpath=//a[2]/div", "xpath:position"]
+      ],
+      "value": "SKILLS"
+    }, {
+      "id": "bc74c598-ecfd-49fa-8518-eaf38b11cdf5",
+      "comment": "Klickar på SKILLS-länken",
+      "command": "click",
+      "target": "css=.menu-link:nth-child(2) > .menu-txt",
+      "targets": [
+        ["css=.menu-link:nth-child(2) > .menu-txt", "css:finder"],
+        ["xpath=//a[2]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fef67ae2-e141-4627-9642-ededb1e59632",
+      "comment": "Klickar på \"GET IN TOUCH\"-knappen längst ner på sidan",
+      "command": "click",
+      "target": "css=.div-block-37 .btn-dark",
+      "targets": [
+        ["css=.div-block-37 .btn-dark", "css:finder"],
+        ["xpath=(//a[contains(text(),'GET IN TOUCH')])[2]", "xpath:link"],
+        ["xpath=(//a[contains(@href, '#')])[2]", "xpath:href"],
+        ["xpath=//div[7]/div/div/div[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6a8c7ac2-5da1-4d81-838f-4b490a00b6f1",
+      "comment": "Checkar så att det finns rätt email för kontakt",
+      "command": "assertText",
+      "target": "css=.div-block-212:nth-child(1)",
+      "targets": [
+        ["css=.div-block-212:nth-child(1)", "css:finder"],
+        ["xpath=//div[12]/div/div/div[3]/div", "xpath:position"]
+      ],
+      "value": "HELLO@INCEPTIVE.SE"
+    }, {
+      "id": "a3768120-cbc9-4034-a2a0-7f8de93f6612",
+      "comment": "Stänger modalen för kontaktuppgifter",
+      "command": "click",
+      "target": "xpath=//div[10]/div/img",
+      "targets": [
+        ["css=.close-symbol", "css:finder"],
+        ["xpath=//img[contains(@src,'https://uploads-ssl.webflow.com/608fa9bc5a9b7b5a40b07c92/608fa9bc5a9b7bd08eb07cfb_close_white_24dp.svg')]", "xpath:img"],
+        ["xpath=//div[10]/div/img", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "bcb3ecfd-4ef7-45a0-b009-d68a75085528",
+    "name": "CheckJ&C",
+    "commands": [{
+      "id": "3110b643-4404-41a1-bb3a-ca19acd2ec54",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a878fb5d-6b3a-428d-a9d2-d79b28491382",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1920x1080",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5d358a6e-897b-4a6b-be31-699271d1a3bf",
+      "comment": "Klickar på menyn",
+      "command": "click",
+      "target": "css=.menu-link:nth-child(3) > .menu-txt",
+      "targets": [
+        ["css=.menu-link:nth-child(3) > .menu-txt", "css:finder"],
+        ["xpath=//a[3]/div", "xpath:position"]
+      ],
+      "value": "",
+      "opensWindow": true,
+      "windowHandleName": "win2681",
+      "windowTimeout": 2000
+    }, {
+      "id": "73b74cd1-83ce-4fd7-9b6d-e8745fe262c2",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${win2681}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "730edde9-b14c-4622-9070-bf82f622e044",
+      "comment": "Klickar in på karriärmenyn",
+      "command": "click",
+      "target": "css=.px-6",
+      "targets": [
+        ["css=.px-6", "css:finder"],
+        ["xpath=//header/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a8595fda-34d9-4151-83a8-0faf53def2c1",
+      "comment": "Ser så att länken \"Start\" finns",
+      "command": "assertElementPresent",
+      "target": "linkText=Start",
+      "targets": [],
+      "value": "200"
+    }, {
+      "id": "7c1d1538-70e4-46d2-932f-8397c5c096bd",
+      "comment": "Ser så att länken \"Departments\" finns",
+      "command": "assertElementPresent",
+      "target": "linkText=Departments",
+      "targets": [
+        ["linkText=Departments", "linkText"],
+        ["css=li:nth-child(2) > .text-xl", "css:finder"],
+        ["xpath=//a[contains(text(),'Departments')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/departments')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Departments')]", "xpath:innerText"]
+      ],
+      "value": "200"
+    }, {
+      "id": "19aeacba-7822-48f9-ab4b-e4c81461ff58",
+      "comment": "Ser så att länken \"Platser\" finns",
+      "command": "assertElementPresent",
+      "target": "linkText=Platser",
+      "targets": [
+        ["linkText=Platser", "linkText"],
+        ["css=li:nth-child(3) > .text-xl", "css:finder"],
+        ["xpath=//a[contains(text(),'Platser')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/locations')]", "xpath:href"],
+        ["xpath=//li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Platser')]", "xpath:innerText"]
+      ],
+      "value": "200"
+    }, {
+      "id": "8a867a93-1b11-4d66-9e20-9fdf3f63b7dd",
+      "comment": "Ser så att länken \"Jobb\" finns",
+      "command": "assertElementPresent",
+      "target": "linkText=Jobb",
+      "targets": [
+        ["linkText=Jobb", "linkText"],
+        ["css=li:nth-child(4) > .text-xl", "css:finder"],
+        ["xpath=//a[contains(text(),'Jobb')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/jobs')]", "xpath:href"],
+        ["xpath=//li[4]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Jobb')]", "xpath:innerText"]
+      ],
+      "value": "200"
+    }, {
+      "id": "6068a872-6f5a-415e-bebc-82297799f7c9",
+      "comment": "Klickar för att stänga Karriärmenyn",
+      "command": "click",
+      "target": "css=.px-6",
+      "targets": [
+        ["css=.px-6", "css:finder"],
+        ["xpath=//header/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "15b0013d-08ba-4546-95eb-81bdc7f7dfaa",
+      "comment": "Checkar så att Connect-länken finns",
+      "command": "assertElementPresent",
+      "target": "linkText=Connect",
+      "targets": [
+        ["linkText=Connect", "linkText"],
+        ["css=.mt-8 > .careersite-button:nth-child(1)", "css:finder"],
+        ["xpath=//section[@id='section-7037710']/section/div/div/div/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'https://dreamteam.inceptive.se/connect')])[2]", "xpath:href"],
+        ["xpath=//section/div/div/div/a", "xpath:position"]
+      ],
+      "value": "200"
+    }, {
+      "id": "00e0d370-d6b8-4496-ae4f-2228e3ad661e",
+      "comment": "Ser att email-formuläret finns",
+      "command": "assertElementPresent",
+      "target": "id=full_email",
+      "targets": [
+        ["id=full_email", "id"],
+        ["name=full_email", "name"],
+        ["css=#full_email", "css:finder"],
+        ["xpath=//input[@id='full_email']", "xpath:attributes"],
+        ["xpath=//section[@id='section-auto-join']/div/div/form/input[5]", "xpath:idRelative"],
+        ["xpath=//input[5]", "xpath:position"]
+      ],
+      "value": "200"
+    }, {
+      "id": "e704a2ad-4fc3-498b-a96b-c7b38662ceec",
+      "comment": "Klickar på att skicka iväg email",
+      "command": "click",
+      "target": "css=.fa-circle-chevron-right",
+      "targets": [
+        ["css=.fa-circle-chevron-right", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "abb91298-63f5-4dc2-aa96-399698afe197",
+      "comment": "Checkar så att det kommer upp en felhanteringsruta",
+      "command": "assertElementPresent",
+      "target": "css=.pt-12",
+      "targets": [],
+      "value": "200"
+    }]
+  }],
+  "suites": [{
+    "id": "038112be-cbc7-466a-ba62-6fdb8028679c",
+    "name": "INCEPTIVESelenium",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["08096345-acea-4f60-ab42-51cb9355f89f", "bcb3ecfd-4ef7-45a0-b009-d68a75085528", "dbe58272-2084-4287-9ed5-08032d2f7b40"]
+  }],
+  "urls": ["https://www.inceptive.se/"],
+  "plugins": []
+}

@@ -1,0 +1,2 @@
+# SeleniumIDE
+ tester från SeleniumIDE

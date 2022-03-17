@@ -1,4 +1,10 @@
 # SeleniumIDE
- tester från SeleniumIDE
+tester från SeleniumIDE
 
-side.yml filerna beskriver vilka settings som används browsers ex.
+INFO: side.yml filerna beskriver vilka settings som används browsers ex.
+
+Kör tester lokalt
+
+Sätt upp Jenkins lokalt
+
+Anpassa batch-filen med CLI kommando
